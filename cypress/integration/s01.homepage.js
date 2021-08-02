@@ -1,5 +1,6 @@
 const links = require('../fixtures/links')
-
+const homepage = require('../fixtures/homepage')
+const {Homepage} = require("../pages/homepage");
 
 describe('S01 - Homepage displays correctly', () => {
   beforeEach(() => {
@@ -9,11 +10,14 @@ describe('S01 - Homepage displays correctly', () => {
 
 
   it('displays boxes with advantages', () => {
-    var advantages = cy.$$('#advantages .col-sm-4').text()
-    cy.debug(advantages)
+    for(let advantageText of homepage.advantages){
+      cy.contains(Homepage.advantage, advantageText)
+    }
+
   })
 
-  xit('displays boxes with hot this week items', () => {
+  it('displays boxes with hot this week items', () => {
+    cy.get(Homepage.hotItems).should('be.visible').and('have.length', 5)
   })
 
 })
