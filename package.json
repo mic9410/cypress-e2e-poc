@@ -4,10 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run-s01": "cypress run --spec cypress/integration/s01.homepage.js",
+    "cy:run-s02": "cypress run --spec cypress/integration/s02.product.details.spec.js",
+    "cy:run-s03": "cypress run --spec cypress/integration/s03.catalogue.spec.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Michal Foryt",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^8.1.0"

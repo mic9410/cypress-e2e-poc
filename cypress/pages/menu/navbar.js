@@ -1,8 +1,11 @@
 export class Navbar {
     static totalNumberItemsInCart = '#numItemsInCart'
+    static homeButton = '#tabIndex'
+    static catalogueDropdown = '#tabCatalogue'
 
-    static isCorrectNumberOfItemsInCart(number) {
+    static verifyCorrectNumberOfItemsInCart(number) {
         let cardText = (number === 0 ? '0 items in cart' : `${number} item(s) in cart`)
-        cy.get(Navbar.totalNumberItemsInCart).should('have.text', cardText)
+        cy.get(this.totalNumberItemsInCart).should('have.text', cardText)
     }
+
 }

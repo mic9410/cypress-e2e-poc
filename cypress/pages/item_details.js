@@ -14,9 +14,4 @@ export class ItemDetails {
         cy.get(ItemDetails.mainImage).should('be.visible')
         cy.get(ItemDetails.socialMedia).should('be.visible')
     }
-
-    static addItemsToCard(quantity) {
-
-        cy.get()
-    }
 }
