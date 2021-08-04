@@ -6,5 +6,5 @@ To run this code, first you have to download the code from the repository. Then 
 
 To run the test, you can type _cy:open_, to open the Cypress gui.
 _cy:run_ to run all tests in the terminal. 
-To run single test, type _cy:run-s_[suite number]
+To run single test, type _cy:run-s_[suite number], eg. _cy:run-s_01_. 
   .  
